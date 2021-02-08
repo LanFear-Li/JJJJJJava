@@ -1,11 +1,10 @@
+package practise;
 import javax.swing.*;
-import javax.swing.plaf.basic.BasicButtonListener;
-import javax.swing.plaf.basic.BasicOptionPaneUI;
 import java.awt.*;
 import java.awt.event.*;
 import static net.mindview.util.swingConsole.*;
 
-public class test extends JFrame {
+public class button extends JFrame {
     JButton b1 = new JButton("button 1");
     JButton b2 = new JButton("button 2");
     JTextField text = new JTextField(10);
@@ -15,7 +14,7 @@ public class test extends JFrame {
             text.setText(name);
         }
     };
-    public test() {
+    public button() {
         b1.addActionListener(bl);
         b2.addActionListener(bl);
         setLayout(new FlowLayout());
@@ -24,6 +23,6 @@ public class test extends JFrame {
         add(text);
     }
     public static void main(String[] args) {
-        run(new test(), 500, 500);
+        run(new button(), 500, 500);
     }
 }
